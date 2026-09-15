@@ -1,0 +1,197 @@
+import 'package:flutter/material.dart';
+
+class StudentDashboard extends StatelessWidget {
+  const StudentDashboard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text("Student Dashboard"),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.logout, color: Colors.grey),
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print("Add subject clicked!");
+        },
+        child: const Icon(color: Colors.purple, Icons.add),
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 100,
+                  height: 100, 
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.blue.shade50,
+                  ),
+                  child: ClipOval(
+                    child:  Image.asset('assets/speed.jpg',
+                      width: 100, 
+                      height: 100, 
+                      fit:
+                          BoxFit.contain, 
+                    ),
+                  ),
+                ),
+                SizedBox(width: 10),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Geoffrey E. Dalisay Jr.",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text("ID: 560-150"),
+                    Text("BSIT 3ND YEAR"),
+                  ],
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Card(
+              shadowColor: Colors.black,
+              child: Padding(
+                padding: EdgeInsets.all(15),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Icon(Icons.email),
+                        SizedBox(width: 12),
+                        Text("geoffreydalisay8@gmail.com"),
+                      ],
+                    ),
+                    SizedBox(height: 24),
+                    Row(
+                      children: [
+                        Icon(Icons.phone),
+                        SizedBox(width: 12),
+                        Text("+63 991 285 4544"),
+                      ],
+                    ),
+                    SizedBox(height: 24),
+                    Row(
+                      children: [
+                        Icon(Icons.home),
+                        SizedBox(width: 12),
+                        Text(
+                          "Farland Extension, Dumoy,  Davao City, Philippines",
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 20),
+            Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "Subjects",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(height: 20),
+            Column(
+              children: [
+                Card(
+                  shadowColor: Colors.black,
+                  child: Padding(
+                    padding: EdgeInsets.all(15),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Text("Mobile App Dev"),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text("Instructor: Mr Tester", style: TextStyle(fontSize: 12),),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text("Schedule: Mon/Wed 10:00 - 12:00 PM", style: TextStyle(fontSize: 12),),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Card(
+                  shadowColor: Colors.black,
+                  child: Padding(
+                    padding: EdgeInsets.all(15),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Text("Mobile App Dev"),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text("Instructor: Mr Tester", style: TextStyle(fontSize: 12),),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text("Schedule: Mon/Wed 10:00 - 12:00 PM", style: TextStyle(fontSize: 12),),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Card(
+                  shadowColor: Colors.black,
+                  child: Padding(
+                    padding: EdgeInsets.all(15),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Text("Mobile App Dev"),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text("Instructor: Mr Tester", style: TextStyle(fontSize: 12),),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text("Schedule: Mon/Wed 10:00 - 12:00 PM", style: TextStyle(fontSize: 12),),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
