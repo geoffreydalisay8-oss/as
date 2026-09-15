@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+import 'package:stateless_labexam_dalisay/student_dashboard.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Stateless Lab Exam',
+      theme: ThemeData(
+        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: StudentDashboard(),
+    );
+  }
+}
